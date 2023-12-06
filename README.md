@@ -1,6 +1,6 @@
 # BDRP
 BDRP project
-Colab Setup: 
+Colab Setup: \n
 Required Installs: 
 - ****
 Run Deblur-NeRF: 
