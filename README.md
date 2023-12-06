@@ -15,7 +15,7 @@
 ## Error Logs and Resolutions
 
 ### Situation
-- **Issue**: Running Synthetic Dataset pretrained weights to record metrics.
+- **Goal**: Running Synthetic Dataset pretrained weights to record metrics.
 - **Error**: `subprocess.CalledProcessError`: Command 'mogrify -resize 100.0% -format png *.png' returned non-zero exit status 127.
 
 ### Resolution
