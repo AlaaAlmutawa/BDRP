@@ -1,5 +1,5 @@
-# BDRP Project Colab Setup
-
+# BDRP Project 
+## Colab Setup
 ## Required Installs
 
 <!-- Instructions or list of required installations go here -->
@@ -10,7 +10,7 @@
 
 ## Additional Setup
 
-- **Consultation with Kou**: Ask Kou about the specific setup steps she undertook for [particular aspect of the project].
+- Ask Kou about the specific setup steps she undertook for [particular aspect of the project].
 
 ## Error Logs and Resolutions
 
@@ -23,5 +23,9 @@
 - **Command**:
   ```bash
   !sudo apt-get install imagemagick
+
+## Ruche Cluster Setup
+
+
 
 
