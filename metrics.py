@@ -51,7 +51,7 @@ def calculate_psnr(dir_gt, dir_deblurred):
     psnr_values = []
     filenames_gt = os.listdir(dir_gt)
     filenames_deblurred = os.listdir(dir_deblurred)
-
+    print(dir_deblurred)
     for filename in filenames_gt:
         if filename in filenames_deblurred:
             path_gt = os.path.join(dir_gt, filename)
@@ -100,7 +100,7 @@ if __name__ == "__main__":
     
     if args.psnr: 
         print('test')
-        df = calculate_psnr(args.gtdir,args.blurdir)        
+        df = calculate_psnr(args.gtdir,args.deblurdir)        
         # csv_path = WORK_AREA+'/blind_rl/'
         # os.chdir(csv_path)
         timestr = time.strftime("%Y%m%d-%H%M%S")
