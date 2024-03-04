@@ -60,12 +60,14 @@ source activate deblur_nerf
 #### Steps 
 1. Load the dataset
 2. Extract clear frames
+   - Note that expected directory of stored images is as follows >> data/dataset_name/images
+   - Result of this, will be two new folders populated in the dataset folder, one for blur frames and one for clear frames
 ```bash
-command
+python fft_blur_detection.py --dataset dataset_name --purpose clear_frames
 ```
 3. Deblur images
 
-Currently, we are limited by the assumption that we apriori whether the images the blur in the images is synthetic or real. (automated detection of the type of blur is left for future work).
+Currently, we are limited by the assumption that we apriori whether the blur in the images is synthetic or real. (automated detection of the type of blur is left for future work).
 
 If the blur is Synthetic, we execute DeepRFT model with Go-Pro plus pretrained weights 
 ```bash
@@ -81,9 +83,14 @@ python test.py --weights pretrained/DeepRFT_PLUS/model_RealBlurJ.pth --input_dir
 python3 run_nerf.py --config configs/<config_path> --kernel_type=none
 ```
 #### Retrieving blur score 
-
+a. For original dataset
 ```bash
-command
+python fft_blur_detection.py --dataset dataset_name --purpose dataset_blur_score
+```
+b. For deblur results
+   - Note: Expected directory structure for each model results >> data/dataset_name/model1
+```bash
+python fft_blur_detection.py --dataset dataset_name --purpose deblur_result_blur_score --deblur_models model1,model2,model3
 ```
 #### Dataset and experiments results 
 * blur_objects dataset and its corresponding poses can be accessed through [link](https://drive.google.com/drive/folders/1TfuY0mkoK7vQ0UoM6S_E1ibNGXxfmoM8)
