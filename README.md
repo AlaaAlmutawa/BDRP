@@ -49,7 +49,7 @@ source activate deblur_nerf
 #### Research Deep Learning Image Deblurring methods and experiment
 - Deep Learning deblurring techqnuey: <choose one> -> NaiveNeRF
 #### Metrics:
-
+![alt text](https://github.com/AlaaAlmutawa/BDRP/blob/main/diagrams/Taxonomy-Metrics.png)
 #### Dataset: 
 
 
