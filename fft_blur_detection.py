@@ -2,11 +2,21 @@ import os
 import cv2
 import shutil
 import numpy as np
+import argparse
 
-dataset = "blur_objects"
-std_dev_limit = 1.3
-max_fft_dist = 30
-deblur_models = ["mprnet", "restormer", "deeprft"]
+parser = argparse.ArgumentParser(description="FFT Blur Score")
+parser.add_argument("--dataset", type=str, help="Provide dataset folder name", default="blurwine")
+parser.add_argument("--std_dev_limit", type=float, help="Standard deviation limit for threshold", default=1.3)
+parser.add_argument("--max_fft_dist", type=float, help="Max FFT freq dist considered between clear and extremely blurry frame", default=30)
+parser.add_argument("--deblur_models", type=str, help="Provide list of deblur model result folders", default="deeprft")
+parser.add_argument("--purpose", type=str, help="Choose your purpose", choices=["clear_frames", "dataset_blur_score", "deblur_result_blur_score"], default="clear_frames")
+
+args = parser.parse_args()
+
+dataset = args.dataset
+std_dev_limit = args.std_dev_limit
+max_fft_dist = args.max_fft_dist
+deblur_models = [str(item) for item in args.deblur_models.split(',')]
 
 def calc_fft_score(image, shift_percent=0.1):
     h, w = image.shape
@@ -98,10 +108,19 @@ def calc_deblur_model_blur_scores(dataset, models, max_fft_dist, max_clear_fft,d
 
 
 
-clear_frames, clear_fft_val, blur_frames, blur_fft_val = identify_clear_frames(dataset, std_dev_limit)
-max_clear_fft = np.max(np.array(clear_fft_val))
-dataset_median_score = median_dataset_blur_score(blur_fft_val, max_clear_fft, max_fft_dist)
-deblur_model_blur_scores = calc_deblur_model_blur_scores(dataset, deblur_models, max_fft_dist, max_clear_fft,dataset_median_score)
+if args.purpose == "clear_frames":
+    clear_frames, clear_fft_val, blur_frames, blur_fft_val = identify_clear_frames(dataset, std_dev_limit)
+elif args.purpose == "dataset_blur_score":
+    clear_frames, clear_fft_val, blur_frames, blur_fft_val = identify_clear_frames(dataset, std_dev_limit)
+    max_clear_fft = np.max(np.array(clear_fft_val))
+    dataset_median_score = median_dataset_blur_score(blur_fft_val, max_clear_fft, max_fft_dist)
+elif args.purpose == "deblur_result_blur_score":
+    clear_frames, clear_fft_val, blur_frames, blur_fft_val = identify_clear_frames(dataset, std_dev_limit)
+    max_clear_fft = np.max(np.array(clear_fft_val))
+    dataset_median_score = median_dataset_blur_score(blur_fft_val, max_clear_fft, max_fft_dist)
+    deblur_model_blur_scores = calc_deblur_model_blur_scores(dataset, deblur_models, max_fft_dist, max_clear_fft,dataset_median_score)
+else:
+    pass
 
 
 
