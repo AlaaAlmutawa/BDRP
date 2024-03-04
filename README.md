@@ -53,7 +53,7 @@ source activate deblur_nerf
 ### Execution of the pipeline
 #### Pre-requistes: 
 1. DeepRFT
-   Clone [DeepRFT repository](https://github.com/invokerer/deeprft)
+   * Clone [DeepRFT repository](https://github.com/invokerer/deeprft)
 2. NeRF
    * Clone [Deblur-NeRF repository](https://github.com/limacv/Deblur-NeRF)
    * We have utilized this repository as it can be used to run both deblur-nerf and vanilla nerf. As per the author's instruction, vanilla nerf can be ran when setting the configuration of kerneltype=none.
