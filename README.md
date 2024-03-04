@@ -47,6 +47,11 @@ source activate deblur_nerf
 #### Metrics:
 ![alt text](https://github.com/AlaaAlmutawa/BDRP/blob/main/diagrams/Taxonomy-Metrics.png)
 #### Dataset: 
+![alt text](https://github.com/AlaaAlmutawa/BDRP/blob/main/diagrams/dataset_overview.png)
+#### Proposed pipeline
+![alt text](https://github.com/AlaaAlmutawa/BDRP/blob/main/diagrams/Proposed_pipeline.png)
+##### Execution of the pipeline
+
 
 
 
