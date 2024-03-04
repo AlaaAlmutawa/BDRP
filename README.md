@@ -55,6 +55,8 @@ source activate deblur_nerf
 1. DeepRFT
    Clone [DeepRFT repository](https://github.com/invokerer/deeprft)
 2. NeRF
+   * Clone [Deblur-NeRF repository](https://github.com/limacv/Deblur-NeRF)
+   * We have utilized this repository as it can be used to run both deblur-nerf and vanilla nerf. As per the author's instruction, vanilla nerf can be ran when setting the configuration of kerneltype=none.
 #### Steps 
 1. Load the dataset
 2. Extract clear frames
@@ -75,6 +77,11 @@ python test.py --weights pretrained/DeepRFT_PLUS/model_RealBlurJ.pth --input_dir
 ```
 4. Combine the clear frames extracted in step 2 with the deblurred frames
 5. Execute vanilla NeRF
+```bash
+command
+```
+#### Retrieving blur score 
+
 ```bash
 command
 ```
