@@ -38,10 +38,10 @@ source activate deblur_nerf
 - Results
 - Discussion and Analysis
 
-## Goal: 
+#### Goal: 
 ### Research the possibility of decoupling the deblurring process from the 3d reconstruction of noval views. 
 ### Given abnormal input with motion blur, is it possible to decouple the deblurring step from the 3d reconstruction of the novel views and get acceptable results? 
-### Experiments: 
+## Experiments: 
 #### Techniques explored
 ![alt text](https://github.com/AlaaAlmutawa/BDRP/blob/main/diagrams/Taxonomy-Techniques.png)
 #### Metrics:
