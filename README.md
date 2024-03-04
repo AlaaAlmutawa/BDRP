@@ -78,7 +78,7 @@ python test.py --weights pretrained/DeepRFT_PLUS/model_RealBlurJ.pth --input_dir
 4. Combine the clear frames extracted in step 2 with the deblurred frames
 5. Execute vanilla NeRF
 ```bash
-command
+python3 run_nerf.py --config configs/<config_path> --kernel_type=none
 ```
 #### Retrieving blur score 
 
@@ -87,7 +87,7 @@ command
 ```
 #### Dataset and experiments results 
 * blur_objects dataset and its corresponding poses can be accessed through [link](https://drive.google.com/drive/folders/1TfuY0mkoK7vQ0UoM6S_E1ibNGXxfmoM8)
-* all experiments results can be accessed through [link](https://drive.google.com/drive/folders/1L_MY4IAPPEpqEMyJrcCFgnFpDCdUlZz2)
+* all experiments results can be accessed through [link](https://drive.google.com/drive/folders/13oSU2SKoaJWBSJYInp2-am3PX5zuP33p?usp=sharing)
 
 
 
