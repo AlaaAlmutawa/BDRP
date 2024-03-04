@@ -42,12 +42,8 @@ source activate deblur_nerf
 ### Research the possibility of decoupling the deblurring process from the 3d reconstruction of noval views. 
 ### Given abnormal input with motion blur, is it possible to decouple the deblurring step from the 3d reconstruction of the novel views and get acceptable results? 
 #### Plan: 
-#### Research traditional Image Deblurring methods and experiment
-- OpenCV -> Frame filtering -> NaiveNeRF 
-- OpenCV -> Deblurring techniques -> NaiveNeRF 
-- Traditional deblurring technique: Blind Richardson Lucy -> NaiveNeRF
-#### Research Deep Learning Image Deblurring methods and experiment
-- Deep Learning deblurring techqnuey: <choose one> -> NaiveNeRF
+#### Techniques explored
+![alt text](https://github.com/AlaaAlmutawa/BDRP/blob/main/diagrams/Taxonomy-Techniques.png)
 #### Metrics:
 ![alt text](https://github.com/AlaaAlmutawa/BDRP/blob/main/diagrams/Taxonomy-Metrics.png)
 #### Dataset: 
