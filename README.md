@@ -88,7 +88,7 @@ a. For original dataset
 python fft_blur_detection.py --dataset dataset_name --purpose dataset_blur_score
 ```
 b. For deblur results
-   - Note: Expected directory structure for each model results >> data/dataset_name/model1
+   - Note: Expected directory structure for each model results >> data/dataset_name/model
 ```bash
 python fft_blur_detection.py --dataset dataset_name --purpose deblur_result_blur_score --deblur_models model1,model2,model3
 ```
