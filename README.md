@@ -85,6 +85,9 @@ command
 ```bash
 command
 ```
+#### Dataset and experiments results 
+* blur_objects dataset and its corresponding poses can be accessed through [link]()
+* all experiments results can be accessed through [link]()
 
 
 
