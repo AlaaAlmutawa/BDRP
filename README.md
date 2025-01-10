@@ -96,8 +96,6 @@ python fft_blur_detection.py --dataset dataset_name --purpose deblur_result_blur
 * blur_objects dataset and its corresponding poses can be accessed through [link](https://drive.google.com/drive/folders/1TfuY0mkoK7vQ0UoM6S_E1ibNGXxfmoM8)
 * all experiments results can be accessed through [link](https://drive.google.com/drive/folders/13oSU2SKoaJWBSJYInp2-am3PX5zuP33p?usp=sharing)
 
-#### Coucou
-
 
 
 
