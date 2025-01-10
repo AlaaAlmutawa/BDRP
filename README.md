@@ -1,4 +1,4 @@
-# BDRP Project 
+# Comparison of various Deblurring Algorithms for 3D Reconstruction using NeRF
 ## Setup Environments: 
 ## Ruche Cluster: 
 
